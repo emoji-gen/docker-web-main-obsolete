@@ -16,6 +16,6 @@ RUN curl -fSL -o yarn.js "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-legac
   && chmod +x /usr/local/bin/yarn
 
 RUN apt-get purge -y xz-utils curl \
-  && apt-get autoremove \
+  && apt-get autoremove -y \
   && apt-get clean \
   && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
