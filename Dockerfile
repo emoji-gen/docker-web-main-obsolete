@@ -4,7 +4,7 @@ ENV NODE_VERSION 6.9.2
 ENV YARN_VERSION 0.21.3
 
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends python3-dev python3-pip python3-setuptools libmemcached-dev libyaml-dev zlib1g-dev gcc xz-utils curl \
+  && apt-get install -y --no-install-recommends python3-dev python3-pip python3-setuptools python3-venv libmemcached-dev libyaml-dev zlib1g-dev gcc xz-utils curl \
   && pip3 install wheel --upgrade
 
 RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz" \
@@ -18,4 +18,5 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 RUN apt-get purge -y xz-utils curl \
   && apt-get autoremove -y \
   && apt-get clean \
-  && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
+  && rm -rf ~/.cache/pip/ \
+  && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/* \
