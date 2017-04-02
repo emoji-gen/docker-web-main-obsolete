@@ -15,7 +15,7 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
   && mv yarn.js /usr/local/bin/yarn \
   && chmod +x /usr/local/bin/yarn
 
-RUN apt-get purge -y xz-utils curl \
+RUN apt-get purge -y xz-utils \
   && apt-get autoremove -y \
   && apt-get clean \
   && rm -rf ~/.cache/pip/ \
