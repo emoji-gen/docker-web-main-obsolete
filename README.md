@@ -1,4 +1,4 @@
 Emoji-Dockerfile
 ----------------
 
-:whale: Dockerfile for Emoji Generator
+:whale: Emoji Generator's Dockerfile for CircleCI 2.0
