@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
-ENV NODE_VERSION 6.9.2
-ENV YARN_VERSION 0.21.3
+ENV NODE_VERSION 6.10.3
+ENV YARN_VERSION 0.24.5
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends python3-dev python3-pip python3-setuptools python3-venv libmemcached-dev libyaml-dev zlib1g-dev gcc xz-utils curl \
